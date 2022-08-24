@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Shop</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Creación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of listArticle">
+        <td>{{ article.id }}</td>
+        <td>{{ article.nombre }}</td>
+        <td>{{ article.precio }}</td>
+        <td>{{ article.stock }}</td>
+        <td>{{ article.creacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
