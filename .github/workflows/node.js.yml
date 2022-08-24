@@ -43,14 +43,11 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: jmartinarroyo
+          password: dckr_pat_IytPdpMEVhaM4LbC2Ll6MP7btmU
       -
         name: Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
           tags: user/app:latest
-          secrets: |
-            DOCKERHUB_USERNAME=jmartinarroyo
-            DOCKERHUB_TOKEN=dckr_pat_IytPdpMEVhaM4LbC2Ll6MP7btmU
