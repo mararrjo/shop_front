@@ -31,7 +31,7 @@ jobs:
     #- run: npm test --watch false
 
   docker:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
     steps:
       -
         name: Set up QEMU
