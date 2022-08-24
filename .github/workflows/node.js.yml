@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-ng:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Check out repository"
@@ -27,7 +27,8 @@ jobs:
       - run: npm run build --if-present
       #- run: npm test --watch false
 
-  docker:
+  build-image-docker:
+    needs: build-ng
     runs-on: ubuntu-latest
     steps:
       -
