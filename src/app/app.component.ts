@@ -9,6 +9,8 @@ import { ArticleService } from './services/article.service';
 })
 export class AppComponent implements OnInit {
 
+  public title = "MyShopFront";
+
   public listArticle: Article[];
 
   constructor(private service: ArticleService) {
