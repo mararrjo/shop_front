@@ -14,7 +14,7 @@ VOLUME /tmp
 RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/nginx.conf
 # COPY dist/MyShopFront /usr/share/nginx/html
-COPY --from=build-step dist/MyShopFront /usr/share/nginx/html
+COPY --from=build-step app/dist/MyShopFront /usr/share/nginx/html
 #expose app and 80 for nginx app
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
