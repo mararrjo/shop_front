@@ -42,6 +42,3 @@ jobs:
         with:
           push: true
           tags: jmartinarroyo/shop_front:latest
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
